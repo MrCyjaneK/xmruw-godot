@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxrb27btbja8d"]
+
+[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_wm4w5"]
+[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="3_cej74"]
+[ext_resource type="Texture2D" uid="uid://cip38phbwfxep" path="res://assets/icons/outlined/baseline_history_black_48dp.png" id="3_xgjlb"]
+[ext_resource type="Texture2D" uid="uid://dips670b4mr88" path="res://icon.svg" id="4_lhjrn"]
+[ext_resource type="PackedScene" uid="uid://b3ynow0cg4ylh" path="res://ui/buttons.tscn" id="6_0t8xk"]
+
+[node name="Receive" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wm4w5")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Top" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="VBox/Top"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Top/Margin"]
+layout_mode = 2
+
+[node name="Receive" type="Label" parent="VBox/Top/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "Receive"
+
+[node name="History" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_cej74")]
+layout_mode = 2
+icon = ExtResource("3_xgjlb")
+
+[node name="Margin" type="MarginContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Content" type="VBoxContainer" parent="VBox/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="QRCode" type="TextureRect" parent="VBox/Margin/VBox/Content"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_lhjrn")
+stretch_mode = 5
+
+[node name="Address" type="Label" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Address"
+horizontal_alignment = 1
+
+[node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("6_0t8xk")]
+layout_mode = 2
+
+[node name="Receive" parent="VBox/Margin/VBox/Buttons" index="0"]
+button_pressed = true
+
+[editable path="VBox/Margin/VBox/Buttons"]
