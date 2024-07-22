@@ -1,0 +1,115 @@
+[gd_scene load_steps=10 format=3 uid="uid://dw307bm4lr0rv"]
+
+[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_y3doe"]
+[ext_resource type="Texture2D" uid="uid://b603ixsi2hyit" path="res://assets/icons/outlined/baseline_code_black_48dp.png" id="2_8wti7"]
+[ext_resource type="Texture2D" uid="uid://dold1edhmt52k" path="res://assets/icons/outlined/baseline_more_vert_black_48dp.png" id="3_360su"]
+[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="4_klldh"]
+[ext_resource type="Texture2D" uid="uid://dprexwkd0nbt5" path="res://assets/icons/outlined/baseline_home_black_48dp.png" id="5_cjrg5"]
+[ext_resource type="Texture2D" uid="uid://d06esw00gpecg" path="res://assets/icons/outlined/baseline_send_black_48dp.png" id="5_mp47w"]
+[ext_resource type="Texture2D" uid="uid://cymc27kry6vut" path="res://assets/icons/outlined/baseline_qr_code_black_48dp.png" id="5_uxaae"]
+[ext_resource type="StyleBox" uid="uid://dplg7rcwixq6f" path="res://ui/button_pressed.tres" id="6_keaer"]
+[ext_resource type="StyleBox" uid="uid://h40wdi0t5gcl" path="res://ui/empty_style.tres" id="7_xxi2q"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y3doe")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Top" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="VBox/Top"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Top/Margin"]
+layout_mode = 2
+
+[node name="Top" type="Label" parent="VBox/Top/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "xmruw"
+
+[node name="Code" parent="VBox/Top/Margin/HBox" instance=ExtResource("4_klldh")]
+layout_mode = 2
+icon = ExtResource("2_8wti7")
+
+[node name="More" parent="VBox/Top/Margin/HBox" instance=ExtResource("4_klldh")]
+layout_mode = 2
+icon = ExtResource("3_360su")
+
+[node name="Margin" type="MarginContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Margin"]
+layout_mode = 2
+
+[node name="Balance" type="Label" parent="VBox/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "0.00000000 XMR"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBox/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Margin/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="QRCode" parent="VBox/Margin/VBox/HBox" instance=ExtResource("4_klldh")]
+layout_mode = 2
+icon = ExtResource("5_uxaae")
+
+[node name="Spacer" type="Control" parent="VBox/Margin/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Home" parent="VBox/Margin/VBox/HBox" instance=ExtResource("4_klldh")]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.960784, 0.486275, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.960784, 0.486275, 0, 1)
+theme_override_constants/icon_max_width = 58
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_xxi2q")
+theme_override_styles/hover = ExtResource("7_xxi2q")
+theme_override_styles/pressed = ExtResource("6_keaer")
+theme_override_styles/disabled = ExtResource("7_xxi2q")
+theme_override_styles/focus = ExtResource("7_xxi2q")
+toggle_mode = true
+text = "Home"
+icon = ExtResource("5_cjrg5")
+flat = false
+expand_icon = false
+
+[node name="Spacer2" type="Control" parent="VBox/Margin/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Send" parent="VBox/Margin/VBox/HBox" instance=ExtResource("4_klldh")]
+layout_mode = 2
+icon = ExtResource("5_mp47w")
