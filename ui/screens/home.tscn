@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dw307bm4lr0rv"]
+[gd_scene load_steps=8 format=3 uid="uid://dw307bm4lr0rv"]
 
 [ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_ulkab"]
 [ext_resource type="Script" path="res://ui/screens/home.gd" id="2_3xuau"]
 [ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="3_3jept"]
 [ext_resource type="Texture2D" uid="uid://b603ixsi2hyit" path="res://assets/icons/outlined/baseline_code_black_48dp.png" id="4_bwchl"]
 [ext_resource type="Texture2D" uid="uid://dold1edhmt52k" path="res://assets/icons/outlined/baseline_more_vert_black_48dp.png" id="5_6pl0r"]
+[ext_resource type="Script" path="res://ui/screens/Balance.gd" id="6_l6cta"]
 [ext_resource type="PackedScene" uid="uid://b3ynow0cg4ylh" path="res://ui/buttons.tscn" id="6_x664c"]
 
 [node name="Home" type="Control"]
@@ -77,6 +78,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "0.00000000 XMR"
 horizontal_alignment = 1
+script = ExtResource("6_l6cta")
 
 [node name="Scroll" type="ScrollContainer" parent="VBox/Margin/VBox/Content"]
 layout_mode = 2

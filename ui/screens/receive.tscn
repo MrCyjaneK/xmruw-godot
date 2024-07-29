@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxrb27btbja8d"]
+[gd_scene load_steps=7 format=3 uid="uid://cxrb27btbja8d"]
 
 [ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_wm4w5"]
 [ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="3_cej74"]
 [ext_resource type="Texture2D" uid="uid://cip38phbwfxep" path="res://assets/icons/outlined/baseline_history_black_48dp.png" id="3_xgjlb"]
 [ext_resource type="Texture2D" uid="uid://dips670b4mr88" path="res://icon.svg" id="4_lhjrn"]
+[ext_resource type="Script" path="res://ui/screens/Address.gd" id="5_wyyl4"]
 [ext_resource type="PackedScene" uid="uid://b3ynow0cg4ylh" path="res://ui/buttons.tscn" id="6_0t8xk"]
 
 [node name="Receive" type="Control"]
@@ -76,6 +77,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Address"
 horizontal_alignment = 1
+script = ExtResource("5_wyyl4")
 
 [node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("6_0t8xk")]
 layout_mode = 2
