@@ -35,11 +35,14 @@ theme_override_constants/separation = 32
 
 [node name="Question" type="Label" parent="Center/VBox"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(524, 160)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Are you sure you'd like
 to perform the transfer?"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Yes" parent="Center/VBox" instance=ExtResource("1_65fi6")]
 unique_name_in_owner = true
