@@ -1,8 +1,12 @@
 extends Control
 
 
+@onready var popup: PopupMenu = %More.get_popup()
+
+
 func _ready() -> void:
 	%App.text = ProjectSettings.get_setting_with_override(&"application/config/name")
+	popup.index_pressed.connect(_index_pressed)
 	
 	# Load transactions example:
 	for i in Monero.getTransactionCount():
@@ -17,3 +21,9 @@ func _ready() -> void:
 func code() -> void:
 	# Do what you want when the code button is pressed.
 	pass
+
+
+func _index_pressed(index: int) -> void:
+	if index == 0:
+		add_child(preload("res://ui/loading_screen.tscn").instantiate())
+		# Save and exit logic here

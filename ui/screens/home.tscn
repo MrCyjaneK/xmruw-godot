@@ -51,9 +51,16 @@ text = "App Name"
 layout_mode = 2
 icon = ExtResource("4_bwchl")
 
-[node name="More" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_3jept")]
+[node name="More" type="MenuButton" parent="VBox/Top/Margin/HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(58, 58)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.960784, 0.486275, 0, 1)
 icon = ExtResource("5_6pl0r")
+expand_icon = true
+item_count = 1
+popup/item_0/text = "Save and Exit"
+popup/item_0/id = 0
 
 [node name="Margin" type="MarginContainer" parent="VBox"]
 layout_mode = 2
