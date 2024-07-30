@@ -77,6 +77,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Address"
 horizontal_alignment = 1
+autowrap_mode = 3
 script = ExtResource("5_wyyl4")
 
 [node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("6_0t8xk")]
