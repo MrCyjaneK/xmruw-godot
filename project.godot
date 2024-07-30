@@ -31,6 +31,10 @@ window/size/window_height_override=960
 
 project/assembly_name="xmruw"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/qr_code/plugin.cfg")
+
 [importer_defaults]
 
 texture={
