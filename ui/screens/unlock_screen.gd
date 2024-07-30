@@ -73,17 +73,15 @@ func zero() -> void:
 	password += "0"
 	update()
 
-var monero_script = load("res://monero_wrapper.cs")
-var monero = monero_script.new()
 
 func unlock() -> void:
 	print(OS.get_data_dir()+"/wallet")
-	var checkPassword = monero.openWallet(OS.get_data_dir()+"/wallet", password)
+	var checkPassword = Monero.openWallet(OS.get_data_dir()+"/wallet", password)
 	if checkPassword:
-		monero.initWallet("http://node.xmr.rocks:18089", false, "") 
+		Monero.initWallet("http://node.xmr.rocks:18089", false, "") 
 		get_tree().change_scene_to_packed(preload("res://ui/screens/home.tscn"))
 	else:
-		print(monero.lastError())
+		print(Monero.lastError())
 		# open failed - show error
 
 func virtual_keyboard(toggled_on: bool) -> void:

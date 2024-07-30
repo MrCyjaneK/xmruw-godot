@@ -1,11 +1,8 @@
 extends Label
 
-var monero_script = load("res://monero_wrapper.cs")
-var monero = monero_script.new()
-
 
 func _ready():
-	%Balance.text = "%.12f" % (monero.getBalance(0)/1e12) + " XMR"
+	%Balance.text = "%.12f" % (Monero.getBalance(0)/1e12) + " XMR"
 
 
 func round_place(num, places):
