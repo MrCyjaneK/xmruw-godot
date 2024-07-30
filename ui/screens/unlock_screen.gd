@@ -81,8 +81,9 @@ func unlock() -> void:
 		Monero.initWallet("http://node.xmr.rocks:18089", false, "") 
 		get_tree().change_scene_to_packed(preload("res://ui/screens/home.tscn"))
 	else:
-		print(Monero.lastError())
-		# open failed - show error
+		var error = Monero.lastError()
+		%Error.text = "Error: %s" % error
+		print(error)
 
 func virtual_keyboard(toggled_on: bool) -> void:
 	if toggled_on:
