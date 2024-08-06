@@ -13,6 +13,6 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	if get_tree().current_scene.scene_file_path != scene:
-		get_tree().change_scene_to_file(scene)
+		Events.wallet_screen_changed.emit(load(scene))
 	else:
 		button_pressed = true

@@ -3,7 +3,7 @@ extends Control
 
 func yes() -> void:
 	if make_transaction() == 0:
-		get_tree().change_scene_to_packed(load("res://ui/screens/home.tscn"))
+		Events.wallet_screen_changed.emit(load("res://ui/screens/home.tscn"))
 	else:
 		%Question.text = Monero.lastTxError()
 		print(%Question.text)
@@ -12,7 +12,7 @@ func yes() -> void:
 
 
 func no() -> void:
-	get_tree().change_scene_to_packed(load("res://ui/screens/home.tscn"))
+	Events.wallet_screen_changed.emit(load("res://ui/screens/home.tscn"))
 
 
 ## Returns 0 if the transaction was successful, returns the error code otherwise.

@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="xmruw"
-run/main_scene="res://ui/screens/unlock_screen.tscn"
+run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Monero="*res://monero_wrapper.cs"
+Events="*res://events.gd"
 
 [display]
 
