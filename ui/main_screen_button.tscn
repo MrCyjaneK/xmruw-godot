@@ -7,11 +7,11 @@
 
 [node name="MainScreenButton" instance=ExtResource("1_xy4w5")]
 theme_override_constants/icon_max_width = 58
-theme_override_styles/normal = ExtResource("2_o8gsw")
+theme_override_styles/focus = ExtResource("2_o8gsw")
+theme_override_styles/disabled = ExtResource("2_o8gsw")
 theme_override_styles/hover = ExtResource("2_o8gsw")
 theme_override_styles/pressed = ExtResource("3_gnui1")
-theme_override_styles/disabled = ExtResource("2_o8gsw")
-theme_override_styles/focus = ExtResource("2_o8gsw")
+theme_override_styles/normal = ExtResource("2_o8gsw")
 toggle_mode = true
 flat = false
 expand_icon = false
