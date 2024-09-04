@@ -79,7 +79,7 @@ func unlock() -> void:
 	var checkPassword = Monero.openWallet(OS.get_data_dir()+"/wallet", password)
 	if checkPassword:
 		Monero.initWallet("http://node.xmr.rocks:18089", false, "") 
-		Events.wallet_screen_changed.emit(preload("res://ui/screens/home.tscn"))
+		Events.wallet_screen_changed.emit(preload("res://xmruw/screens/home.tscn"))
 	else:
 		var error = Monero.lastError()
 		%Error.text = "Error: %s" % error

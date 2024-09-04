@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dta4fno5rpcuf"]
 
-[ext_resource type="Script" path="res://ui/screens/unlock_screen.gd" id="1_spyo1"]
-[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="1_vi0w3"]
+[ext_resource type="Script" path="res://xmruw/screens/unlock_screen.gd" id="1_spyo1"]
+[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://xmruw/button.tscn" id="1_vi0w3"]
 [ext_resource type="Texture2D" uid="uid://3seddwry8awc" path="res://assets/icons/outlined/baseline_keyboard_black_48dp.png" id="3_m2cla"]
 [ext_resource type="Texture2D" uid="uid://dips670b4mr88" path="res://icon.svg" id="4_53fm5"]
 [ext_resource type="Texture2D" uid="uid://dwmh3sgvjpytq" path="res://assets/icons/outlined/baseline_backspace_black_48dp.png" id="5_oygr0"]

@@ -8,4 +8,4 @@ func fee() -> void:
 
 func _continue() -> void:
 	# Ask to continue
-	add_child(preload("res://ui/confirmation.tscn").instantiate())
+	add_child(preload("res://xmruw/confirmation.tscn").instantiate())
