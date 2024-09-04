@@ -2,19 +2,20 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d2h3k6rgu2bgl"
-path="res://.godot/imported/FiraSans-SemiBold.ttf-d42cb1e01b55b15c0fec9d078428b746.fontdata"
+uid="uid://0udfe8qnd3ng"
+path="res://.godot/imported/FiraSans-Bold.ttf-b40c3005ff7ef863f5414753aa19bce0.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Sans/FiraSans-SemiBold.ttf"
-dest_files=["res://.godot/imported/FiraSans-SemiBold.ttf-d42cb1e01b55b15c0fec9d078428b746.fontdata"]
+source_file="res://assets/fonts/fira_sans/FiraSans-Bold.ttf"
+dest_files=["res://.godot/imported/FiraSans-Bold.ttf-b40c3005ff7ef863f5414753aa19bce0.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

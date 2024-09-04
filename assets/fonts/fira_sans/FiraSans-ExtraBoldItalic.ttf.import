@@ -2,19 +2,20 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dwbgia28nro42"
-path="res://.godot/imported/FiraSans-ThinItalic.ttf-937be945001f40423a5b708f4fda7a7c.fontdata"
+uid="uid://c1fxg2dohku7l"
+path="res://.godot/imported/FiraSans-ExtraBoldItalic.ttf-b0027e7a148eacd7b28119d4a2ef67b0.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Sans/FiraSans-ThinItalic.ttf"
-dest_files=["res://.godot/imported/FiraSans-ThinItalic.ttf-937be945001f40423a5b708f4fda7a7c.fontdata"]
+source_file="res://assets/fonts/fira_sans/FiraSans-ExtraBoldItalic.ttf"
+dest_files=["res://.godot/imported/FiraSans-ExtraBoldItalic.ttf-b0027e7a148eacd7b28119d4a2ef67b0.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

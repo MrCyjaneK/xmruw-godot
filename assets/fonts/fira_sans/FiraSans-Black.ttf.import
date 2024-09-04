@@ -2,19 +2,20 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cwx77tmtrrfsi"
-path="res://.godot/imported/FiraSans-Regular.ttf-acfd28d2d099d9d9457b4fae26d413de.fontdata"
+uid="uid://cs0tw1e782ytx"
+path="res://.godot/imported/FiraSans-Black.ttf-dab764475b99540408d049ed90c1b8b2.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Sans/FiraSans-Regular.ttf"
-dest_files=["res://.godot/imported/FiraSans-Regular.ttf-acfd28d2d099d9d9457b4fae26d413de.fontdata"]
+source_file="res://assets/fonts/fira_sans/FiraSans-Black.ttf"
+dest_files=["res://.godot/imported/FiraSans-Black.ttf-dab764475b99540408d049ed90c1b8b2.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

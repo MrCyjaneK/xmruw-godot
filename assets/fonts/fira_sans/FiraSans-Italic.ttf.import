@@ -2,19 +2,20 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d6g6oxj4an2o"
-path="res://.godot/imported/FiraSans-ExtraLightItalic.ttf-b52e731669b2d12057cec45cb8d035df.fontdata"
+uid="uid://bhoceh2puw1s8"
+path="res://.godot/imported/FiraSans-Italic.ttf-e596961317a87b975dd9267afc859e90.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Sans/FiraSans-ExtraLightItalic.ttf"
-dest_files=["res://.godot/imported/FiraSans-ExtraLightItalic.ttf-b52e731669b2d12057cec45cb8d035df.fontdata"]
+source_file="res://assets/fonts/fira_sans/FiraSans-Italic.ttf"
+dest_files=["res://.godot/imported/FiraSans-Italic.ttf-e596961317a87b975dd9267afc859e90.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

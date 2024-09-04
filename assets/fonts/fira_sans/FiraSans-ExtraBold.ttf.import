@@ -2,19 +2,20 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://0udfe8qnd3ng"
-path="res://.godot/imported/FiraSans-Bold.ttf-2e83a8e332799b04e0756aa083e924fc.fontdata"
+uid="uid://bhhjb6rk3dc1v"
+path="res://.godot/imported/FiraSans-ExtraBold.ttf-80df9856fd91d8e6eccff7e45dca5592.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Sans/FiraSans-Bold.ttf"
-dest_files=["res://.godot/imported/FiraSans-Bold.ttf-2e83a8e332799b04e0756aa083e924fc.fontdata"]
+source_file="res://assets/fonts/fira_sans/FiraSans-ExtraBold.ttf"
+dest_files=["res://.godot/imported/FiraSans-ExtraBold.ttf-80df9856fd91d8e6eccff7e45dca5592.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
