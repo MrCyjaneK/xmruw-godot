@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://ui/button.tscn" id="3_cej74"]
 [ext_resource type="Texture2D" uid="uid://cip38phbwfxep" path="res://assets/icons/outlined/baseline_history_black_48dp.png" id="3_xgjlb"]
 [ext_resource type="Texture2D" uid="uid://dips670b4mr88" path="res://icon.svg" id="4_lhjrn"]
-[ext_resource type="Script" path="res://ui/screens/Address.gd" id="5_wyyl4"]
+[ext_resource type="Script" path="res://ui/screens/address.gd" id="5_wyyl4"]
 [ext_resource type="PackedScene" uid="uid://b3ynow0cg4ylh" path="res://ui/buttons.tscn" id="6_0t8xk"]
 [ext_resource type="Script" path="res://addons/qr_code/qr_code_rect.gd" id="7_j1us5"]
 
