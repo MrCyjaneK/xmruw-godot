@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://fntogjkjyyws"]
+[gd_scene load_steps=2 format=3 uid="uid://fntogjkjyyws"]
 
 [ext_resource type="Script" path="res://root.gd" id="1_to1e2"]
-[ext_resource type="PackedScene" uid="uid://dta4fno5rpcuf" path="res://xmruw/screens/unlock_screen.tscn" id="2_e8i53"]
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -11,4 +10,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_to1e2")
-main_scene = ExtResource("2_e8i53")

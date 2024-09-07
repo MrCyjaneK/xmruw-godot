@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw307bm4lr0rv"]
+[gd_scene load_steps=9 format=3 uid="uid://b41j8m7pft7j4"]
 
-[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://xmruw/theme.tres" id="1_ulkab"]
-[ext_resource type="Script" path="res://xmruw/screens/home.gd" id="2_3xuau"]
-[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://xmruw/button.tscn" id="3_3jept"]
-[ext_resource type="Texture2D" uid="uid://b603ixsi2hyit" path="res://assets/icons/outlined/baseline_code_black_48dp.png" id="4_bwchl"]
-[ext_resource type="Texture2D" uid="uid://dold1edhmt52k" path="res://assets/icons/outlined/baseline_more_vert_black_48dp.png" id="5_6pl0r"]
-[ext_resource type="Script" path="res://xmruw/screens/balance.gd" id="6_l6cta"]
-[ext_resource type="PackedScene" uid="uid://b3ynow0cg4ylh" path="res://xmruw/buttons.tscn" id="6_x664c"]
+[ext_resource type="Theme" uid="uid://cujb3qfeg65mb" path="res://cake/theme.tres" id="1_4ntbt"]
+[ext_resource type="Script" path="res://cake/screens/home.gd" id="2_3jm7v"]
+[ext_resource type="PackedScene" uid="uid://bkuoe4ys1q017" path="res://cake/button.tscn" id="3_50gak"]
+[ext_resource type="PackedScene" uid="uid://cejln6wnj2jpx" path="res://cake/background.tscn" id="3_uhdn6"]
+[ext_resource type="Texture2D" uid="uid://b603ixsi2hyit" path="res://assets/icons/outlined/baseline_code_black_48dp.png" id="4_ut22t"]
+[ext_resource type="Texture2D" uid="uid://dold1edhmt52k" path="res://assets/icons/outlined/baseline_more_vert_black_48dp.png" id="5_sjohd"]
+[ext_resource type="Script" path="res://cake/screens/balance.gd" id="6_wnv3a"]
+[ext_resource type="PackedScene" uid="uid://dpucqmsoiuyvf" path="res://cake/buttons.tscn" id="7_wiv52"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -15,8 +16,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_ulkab")
-script = ExtResource("2_3xuau")
+theme = ExtResource("1_4ntbt")
+script = ExtResource("2_3jm7v")
+
+[node name="Background" parent="." instance=ExtResource("3_uhdn6")]
+layout_mode = 1
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -44,18 +48,18 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 48
-text = "xmruw"
+text = "Cake Wallet"
 
-[node name="Code" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_3jept")]
+[node name="Code" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_50gak")]
 layout_mode = 2
-icon = ExtResource("4_bwchl")
+icon = ExtResource("4_ut22t")
 
 [node name="More" type="MenuButton" parent="VBox/Top/Margin/HBox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(58, 58)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.486275, 0, 1)
-icon = ExtResource("5_6pl0r")
+icon = ExtResource("5_sjohd")
 expand_icon = true
 item_count = 1
 popup/item_0/text = "Save and Exit"
@@ -83,7 +87,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "0.00000000 XMR"
 horizontal_alignment = 1
-script = ExtResource("6_l6cta")
+script = ExtResource("6_wnv3a")
 
 [node name="Scroll" type="ScrollContainer" parent="VBox/Margin/VBox/Content"]
 layout_mode = 2
@@ -95,10 +99,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("6_x664c")]
+[node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("7_wiv52")]
 layout_mode = 2
 
-[node name="Home" parent="VBox/Margin/VBox/Buttons" index="2"]
+[node name="Home" parent="VBox/Margin/VBox/Buttons/Margin/HBox" index="2"]
 button_pressed = true
 
 [connection signal="pressed" from="VBox/Top/Margin/HBox/Code" to="." method="code"]

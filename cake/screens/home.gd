@@ -24,5 +24,5 @@ func code() -> void:
 
 func _index_pressed(index: int) -> void:
 	if index == 0:
-		add_child(preload("res://xmruw/loading_screen.tscn").instantiate())
+		add_child(preload("res://cake/loading_screen.tscn").instantiate())
 		# Save and exit logic here

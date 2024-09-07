@@ -1,15 +1,26 @@
 extends Control
 
 
-@export var main_scene: PackedScene
+enum WalletTheme {
+	XMRUW,
+	CAKE,
+}
+
+## The wallet theme to be used.
+@export var wallet_theme := WalletTheme.XMRUW
 
 ## The current wallet screen.
 var screen: Node
 
 
 func _ready() -> void:
-	assert(main_scene, "there is no main scene attached")
 	Events.wallet_screen_changed.connect(change_screen)
+	
+	# Load main scene based on wallet theme
+	var main_scene = (preload("res://xmruw/screens/unlock_screen.tscn")
+			if wallet_theme == WalletTheme.XMRUW else
+			preload("res://cake/screens/unlock_screen.tscn"))
+	
 	change_screen(main_scene)
 
 
