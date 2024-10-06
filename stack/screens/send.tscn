@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://63qvoiilde5w"]
+
+[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_x53nd"]
+[ext_resource type="Script" path="res://stack/screens/send.gd" id="2_3dwbi"]
+[ext_resource type="PackedScene" uid="uid://bsqlc01cowlem" path="res://stack/button.tscn" id="3_aae7c"]
+[ext_resource type="Script" path="res://stack/screens/balance.gd" id="4_qrisa"]
+[ext_resource type="PackedScene" uid="uid://c704f16gxjm2q" path="res://stack/buttons.tscn" id="5_6cqg6"]
+[ext_resource type="PackedScene" uid="uid://dnpcro7up6y6h" path="res://stack/background.tscn" id="6_q0eyc"]
+
+[node name="Send" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_x53nd")
+script = ExtResource("2_3dwbi")
+
+[node name="Background" parent="." instance=ExtResource("6_q0eyc")]
+layout_mode = 1
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Top" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="VBox/Top"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Top/Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBox/Top/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 48
+text = "Send"
+
+[node name="Fee" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_aae7c")]
+layout_mode = 2
+text = "Fee"
+
+[node name="Margin" type="MarginContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Content" type="VBoxContainer" parent="VBox/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="AddressText" type="Label" parent="VBox/Margin/VBox/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 32
+text = "Address"
+
+[node name="Address" type="LineEdit" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="AmountText" type="Label" parent="VBox/Margin/VBox/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 32
+text = "Amount"
+
+[node name="Amount" type="LineEdit" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="NotesText" type="Label" parent="VBox/Margin/VBox/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 32
+text = "Notes"
+
+[node name="Notes" type="LineEdit" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Balance" type="Label" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+text = "Available Balance: 0.00000000 XMR"
+horizontal_alignment = 1
+script = ExtResource("4_qrisa")
+
+[node name="Continue" parent="VBox/Margin/VBox/Content" instance=ExtResource("3_aae7c")]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Continue"
+flat = false
+
+[node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("5_6cqg6")]
+layout_mode = 2
+
+[node name="Send" parent="VBox/Margin/VBox/Buttons" index="4"]
+button_pressed = true
+
+[connection signal="pressed" from="VBox/Top/Margin/HBox/Fee" to="." method="fee"]
+[connection signal="pressed" from="VBox/Margin/VBox/Content/Continue" to="." method="_continue"]
+
+[editable path="VBox/Margin/VBox/Buttons"]

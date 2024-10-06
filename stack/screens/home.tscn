@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyvx1r3qgr1s1"]
+
+[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_3y3og"]
+[ext_resource type="Script" path="res://stack/screens/home.gd" id="2_iexpt"]
+[ext_resource type="PackedScene" uid="uid://dnpcro7up6y6h" path="res://stack/background.tscn" id="3_fa25a"]
+[ext_resource type="PackedScene" uid="uid://bsqlc01cowlem" path="res://stack/button.tscn" id="3_pnm8o"]
+[ext_resource type="Texture2D" uid="uid://b603ixsi2hyit" path="res://assets/icons/outlined/baseline_code_black_48dp.png" id="4_bs1d3"]
+[ext_resource type="Texture2D" uid="uid://20i21g2neipv" path="res://assets/stack_wallet/bars.svg" id="6_ki5jm"]
+[ext_resource type="Script" path="res://stack/screens/balance.gd" id="6_pssbt"]
+[ext_resource type="PackedScene" uid="uid://c704f16gxjm2q" path="res://stack/buttons.tscn" id="7_3r2i3"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3y3og")
+script = ExtResource("2_iexpt")
+
+[node name="Background" parent="." instance=ExtResource("3_fa25a")]
+layout_mode = 1
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Top" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="VBox/Top"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Top/Margin"]
+layout_mode = 2
+
+[node name="App" type="Label" parent="VBox/Top/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 48
+text = "Stack Wallet"
+
+[node name="Code" parent="VBox/Top/Margin/HBox" instance=ExtResource("3_pnm8o")]
+layout_mode = 2
+icon = ExtResource("4_bs1d3")
+
+[node name="More" type="MenuButton" parent="VBox/Top/Margin/HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+icon = ExtResource("6_ki5jm")
+expand_icon = true
+item_count = 1
+popup/item_0/text = "Save and Exit"
+
+[node name="Margin" type="MarginContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Content" type="VBoxContainer" parent="VBox/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="Balance" type="Label" parent="VBox/Margin/VBox/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.137255, 0.137255, 0.137255, 1)
+theme_override_font_sizes/font_size = 48
+text = "0.00000000 XMR"
+horizontal_alignment = 1
+script = ExtResource("6_pssbt")
+
+[node name="Scroll" type="ScrollContainer" parent="VBox/Margin/VBox/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Transactions" type="VBoxContainer" parent="VBox/Margin/VBox/Content/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" parent="VBox/Margin/VBox" instance=ExtResource("7_3r2i3")]
+layout_mode = 2
+
+[node name="Home" parent="VBox/Margin/VBox/Buttons" index="2"]
+button_pressed = true
+
+[connection signal="pressed" from="VBox/Top/Margin/HBox/Code" to="." method="code"]
+
+[editable path="VBox/Margin/VBox/Buttons"]

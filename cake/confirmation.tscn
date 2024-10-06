@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfu57dcjl0rws"]
 
 [ext_resource type="Script" path="res://cake/confirmation.gd" id="1_67n5y"]
-[ext_resource type="PackedScene" uid="uid://bbjtdbkauffe4" path="res://cake/button.tscn" id="2_7fvuj"]
+[ext_resource type="PackedScene" uid="uid://bkuoe4ys1q017" path="res://cake/button.tscn" id="2_7fvuj"]
 
 [node name="Confirmation" type="Control"]
 layout_mode = 3

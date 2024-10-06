@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c33t6vb88d5sd"]
+
+[ext_resource type="PackedScene" uid="uid://bsqlc01cowlem" path="res://stack/button.tscn" id="1_jlnqq"]
+[ext_resource type="StyleBox" uid="uid://cfa8sna6475or" path="res://ui/empty_style.tres" id="2_8bacu"]
+[ext_resource type="Script" path="res://stack/main_button.gd" id="4_e28m6"]
+
+[node name="MainButton" instance=ExtResource("1_jlnqq")]
+theme_override_constants/icon_max_width = 58
+theme_override_styles/focus = ExtResource("2_8bacu")
+theme_override_styles/disabled_mirrored = ExtResource("2_8bacu")
+theme_override_styles/disabled = ExtResource("2_8bacu")
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_8bacu")
+theme_override_styles/hover_pressed = ExtResource("2_8bacu")
+theme_override_styles/hover_mirrored = ExtResource("2_8bacu")
+theme_override_styles/hover = ExtResource("2_8bacu")
+theme_override_styles/pressed_mirrored = ExtResource("2_8bacu")
+theme_override_styles/pressed = ExtResource("2_8bacu")
+theme_override_styles/normal_mirrored = ExtResource("2_8bacu")
+theme_override_styles/normal = ExtResource("2_8bacu")
+toggle_mode = true
+flat = false
+expand_icon = false
+script = ExtResource("4_e28m6")
