@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpucqmsoiuyvf"]
 
 [ext_resource type="StyleBox" uid="uid://d3ee7b84ene22" path="res://cake/round_panel.tres" id="1_jlle4"]
-[ext_resource type="PackedScene" uid="uid://b8em5ar6jle75" path="res://cake/main_screen_button.tscn" id="1_nhqo8"]
+[ext_resource type="PackedScene" uid="uid://b8em5ar6jle75" path="res://cake/main_button.tscn" id="1_nhqo8"]
 [ext_resource type="Texture2D" uid="uid://dlod2657h7lb3" path="res://assets/cake_wallet_images/received.png" id="3_4r1pu"]
 [ext_resource type="Texture2D" uid="uid://cq63qyss2h7uq" path="res://assets/cake_wallet_images/exchange.png" id="4_nogq0"]
 [ext_resource type="Texture2D" uid="uid://cqabseu8u5wha" path="res://assets/cake_wallet_images/send.png" id="5_rxje7"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccof2h0wi4el4"]
 
-[ext_resource type="Theme" uid="uid://cujb3qfeg65mb" path="res://cake/theme.tres" id="1_eyaup"]
+[ext_resource type="Theme" uid="uid://bn0ram2rst6m0" path="res://ui/theme.tres" id="1_eyaup"]
 [ext_resource type="Script" path="res://cake/screens/send.gd" id="2_4h3an"]
 [ext_resource type="PackedScene" uid="uid://cejln6wnj2jpx" path="res://cake/background.tscn" id="3_fn8wj"]
 [ext_resource type="PackedScene" uid="uid://bkuoe4ys1q017" path="res://cake/button.tscn" id="3_nwxfo"]

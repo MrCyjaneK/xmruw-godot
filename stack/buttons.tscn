@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c704f16gxjm2q"]
+
+[ext_resource type="PackedScene" uid="uid://c33t6vb88d5sd" path="res://stack/main_button.tscn" id="1_7q8sv"]
+[ext_resource type="Texture2D" uid="uid://il4p88f60nan" path="res://assets/stack_wallet/arrow-down.svg" id="2_1f0v3"]
+[ext_resource type="Texture2D" uid="uid://bikkexp5d83lv" path="res://assets/stack_wallet/loader.svg" id="3_uvwjd"]
+[ext_resource type="Texture2D" uid="uid://3nfnw4abeel6" path="res://assets/stack_wallet/send.svg" id="4_lrkro"]
+
+[node name="Buttons" type="HBoxContainer"]
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Receive" parent="." instance=ExtResource("1_7q8sv")]
+layout_mode = 2
+text = "Receive"
+icon = ExtResource("2_1f0v3")
+scene = "res://stack/screens/receive.tscn"
+
+[node name="Spacer" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Home" parent="." instance=ExtResource("1_7q8sv")]
+layout_mode = 2
+text = "Home"
+icon = ExtResource("3_uvwjd")
+scene = "res://stack/screens/home.tscn"
+
+[node name="Spacer2" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Send" parent="." instance=ExtResource("1_7q8sv")]
+layout_mode = 2
+text = "Send"
+icon = ExtResource("4_lrkro")
+scene = "res://stack/screens/send.tscn"
